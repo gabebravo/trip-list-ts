@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { GlobalContext } from './context/global';
+import Box from '@mui/material/Box';
+import TripFilter from './components/TripFilter';
+import TripList from './components/TripList';
+import TripSort from './components/TripSort';
 
-function App() {
+export default function App() {
+  const globalReducer = React.useContext(GlobalContext);
+  const { dispatch }: any = globalReducer;
+
+  React.useEffect(() => {
+    dispatch({ type: 'SET_INIT_TRIPS' });
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <div className="header-layout">
+        {' '}
+        <header>
+          <h1>Trip List</h1>
+        </header>
+        <div role="toolbar" className="button-layout">
+          <TripFilter />
+          <TripSort />
+        </div>
+      </div>
+      <div>
+        <Box sx={{ marginTop: 3 }}>
+          <TripList />
+        </Box>
+      </div>
+    </section>
   );
 }
-
-export default App;
