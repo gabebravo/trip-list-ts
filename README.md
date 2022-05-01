@@ -16,7 +16,7 @@ Typescript was used for enforcing type safety between state and component props 
 
 ##### `Accessibility`
 
-React Axe Devtools extension was used for auditing the main view and components.
+React Axe Devtools extension was used for auditing the main view and components.![accessibility-audit](https://user-images.githubusercontent.com/13320719/166165866-31f81dd9-d860-44a6-b8d4-316d159cc22f.jpg)
 
 #### Available Scripts
 
