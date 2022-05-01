@@ -5,10 +5,11 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { SelectChangeEvent } from "@mui/material";
 import { GlobalContext } from '../context/global';
+import { ContextDefaults } from '../types/ContextTypes';
 
 export default function TripFilter() {
   const globalReducer = React.useContext(GlobalContext);
-  const { state, dispatch }: any = globalReducer;
+  const { state, dispatch }: ContextDefaults = globalReducer;
   const options: string[] = Object.values(state.cache.styles);
   const [type, setType] = React.useState(options[0]);
 

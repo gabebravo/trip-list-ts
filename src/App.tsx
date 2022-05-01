@@ -7,7 +7,7 @@ import TripSort from './components/TripSort';
 
 export default function App() {
   const globalReducer = React.useContext(GlobalContext);
-  const { dispatch }: any = globalReducer;
+  const { dispatch } = globalReducer;
 
   React.useEffect(() => {
     dispatch({ type: 'SET_INIT_TRIPS' });

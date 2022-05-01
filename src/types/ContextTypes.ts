@@ -11,3 +11,5 @@ export type State = {
   trips: TripListType[],
   tripByStyleObj: any,
 };
+
+export type ContextDefaults = { state: State, dispatch: any }

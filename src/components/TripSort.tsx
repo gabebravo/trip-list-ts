@@ -4,10 +4,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { GlobalContext } from '../context/global';
+import { ContextDefaults } from '../types/ContextTypes';
 
 export default function TripSort() {
   const globalReducer = React.useContext(GlobalContext);
-  const { state, dispatch }: any = globalReducer;
+  const { state, dispatch }: ContextDefaults = globalReducer;
   const { order } = state;
 
   const handleChange = () => {

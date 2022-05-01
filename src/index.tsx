@@ -7,7 +7,7 @@ import './style.css';
 import { GlobalContext, globalReducer } from './context/global';
 
 // root state wrapper will provide context for all children to access the global reducer
-function StateWrapper({ children, ...props }: any) {
+function StateWrapper({ children }: any) {
   const initialState = React.useContext(GlobalContext); // initialize context
   const [state, dispatch] = React.useReducer(globalReducer, initialState); // use context as the state for the reducer instance
 

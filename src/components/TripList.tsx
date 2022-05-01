@@ -4,10 +4,11 @@ import Grid from '@mui/material/Grid';
 import TripCard from './TripCard';
 import { TripListType } from "../types/TripTypes"
 import { GlobalContext } from '../context/global';
+import { ContextDefaults } from '../types/ContextTypes';
 
 export default function TripList() {
   const globalReducer = React.useContext(GlobalContext);
-  const { state }: any = globalReducer;
+  const { state }: ContextDefaults = globalReducer;
 
   // Human readable date formatter MM/DD/YYYY
   const getDate = (date: Date): string => {
