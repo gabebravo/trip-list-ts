@@ -1,15 +1,16 @@
-## Project Notes
+### Project Notes
 #### Technologies Used
-##### Create React App
-Create React App requires zero configuration and was used for the setup React App boilerplate.  
-##### Context
-The React Context api was used for global state management between the components. 
-##### Typescript
-Typescript was used for enforcing type safety between state and component props throughout the app. 
-##### Accessibility
-React Axe Devtools extension was used for auditing the main view and components. 
-#### Available Scripts
 
+##### `Create React App`
+Create React App requires zero configuration and was used for the setup React App boilerplate.  
+##### `Context`
+The React Context api was used for global state management between the components. 
+##### `Typescript`
+Typescript was used for enforcing type safety between state and component props throughout the app. 
+##### `Accessibility`
+React Axe Devtools extension was used for auditing the main view and components. 
+
+#### `Available Scripts`
 In the project directory, you can run:
 
 ##### `npm start`
